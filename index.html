@@ -80,8 +80,11 @@
 </style>
 <style>
   /* ---- Mobile / responsive ---- */
+  .hero-br{display:none;}
   @media (max-width:760px){
     .nav-links{display:none!important;}
+    /* force the hero name onto two lines so it always fits */
+    .hero-br{display:block!important;}
     /* stack every multi-column layout */
     [style*="grid-template-columns"]{grid-template-columns:1fr!important;}
     /* tighten the 40px side gutters on the main containers */
@@ -89,7 +92,7 @@
     /* shrink the largest vertical/column gaps */
     [style*="gap:72px"],[style*="gap:64px"],[style*="gap:60px"],[style*="gap:56px"]{gap:34px!important;}
     /* let the hero headline shrink further so it never overflows */
-    [style*="clamp(60px,13vw,212px)"]{font-size:clamp(34px,11vw,212px)!important;}
+    [style*="clamp(60px,13vw,212px)"]{font-size:clamp(44px,13vw,212px)!important;overflow-wrap:break-word;}
     /* footer giant name: wrap to two lines instead of being clipped mid-word */
     [style*="clamp(40px,12vw,184px)"]{white-space:normal!important;overflow:visible!important;line-height:0.9!important;}
     /* hide the squiggle+bee decoration that overlaps the shrunken hero name */
@@ -132,7 +135,7 @@
       <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.04em;color:#8A9099;">©2026, Brooklyn NY</span>
     </div>
     <div style="position:relative;border-top:1px solid rgba(10,15,26,0.14);padding-top:10px;">
-      <h1 data-reveal style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(60px,13vw,212px);line-height:0.86;letter-spacing:-0.03em;text-transform:uppercase;margin:0;color:#0A0F1A;">Anna Albright</h1>
+      <h1 data-reveal style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(60px,13vw,212px);line-height:0.86;letter-spacing:-0.03em;text-transform:uppercase;margin:0;color:#0A0F1A;">Anna <br class="hero-br">Albright</h1>
       <div aria-hidden="true" style="position:absolute;top:6px;right:2px;width:160px;height:80px;pointer-events:none;">
         <svg width="160" height="80" viewBox="0 0 160 80" fill="none" style="position:absolute;inset:0;"><path d="M6 70 C 50 64, 70 30, 110 26 S 150 16, 154 10" stroke="#1E5FE8" stroke-width="1.4" stroke-dasharray="1.5 7" stroke-linecap="round" opacity="0.55"/></svg>
         <div style="position:absolute;top:2px;right:0;animation:bee-bob 3.6s ease-in-out infinite;">
