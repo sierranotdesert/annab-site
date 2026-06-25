@@ -89,11 +89,19 @@
     /* shrink the largest vertical/column gaps */
     [style*="gap:72px"],[style*="gap:64px"],[style*="gap:60px"],[style*="gap:56px"]{gap:34px!important;}
     /* let the hero headline shrink further so it never overflows */
-    [style*="clamp(60px,13vw,212px)"]{font-size:clamp(38px,12vw,212px)!important;}
+    [style*="clamp(60px,13vw,212px)"]{font-size:clamp(34px,11vw,212px)!important;}
+    /* footer giant name: wrap to two lines instead of being clipped mid-word */
+    [style*="clamp(40px,12vw,184px)"]{white-space:normal!important;overflow:visible!important;line-height:0.9!important;}
+    /* hide the squiggle+bee decoration that overlaps the shrunken hero name */
+    [style*="width:160px;height:80px"]{display:none!important;}
+    /* pull the round name-story sticker fully on-screen */
+    #bee-sticker{left:8px!important;bottom:10px!important;}
     img{max-width:100%;}
   }
   @media (max-width:420px){
     [style*="max-width:1280px"]{padding-left:16px!important;padding-right:16px!important;}
+    /* a touch smaller so 'Anna B.' in the About heading never overflows */
+    [style*="clamp(48px,6.2vw,98px)"]{font-size:clamp(38px,11vw,98px)!important;}
   }
 </style>
 </head>
