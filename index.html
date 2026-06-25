@@ -87,6 +87,9 @@
     .hero-br{display:block!important;}
     /* stack every multi-column layout */
     [style*="grid-template-columns"]{grid-template-columns:1fr!important;}
+    /* drop the vertical stat dividers once columns stack */
+    [style*="border-right:1px solid rgba(10,15,26,0.12)"],
+    [style*="border-right:1px solid rgba(255,255,255,0.16)"]{border-right:none!important;}
     /* tighten the 40px side gutters on the main containers */
     [style*="max-width:1280px"]{padding-left:20px!important;padding-right:20px!important;}
     /* shrink the largest vertical/column gaps */
@@ -120,6 +123,7 @@
       </a>
       <div class="nav-links" style="display:flex;align-items:center;gap:30px;">
         <a href="#osha" style="font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:600;text-decoration:none;color:#4A5058;">Heat&nbsp;safety</a>
+        <a href="research.html" style="font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:600;text-decoration:none;color:#4A5058;">Research</a>
         <a href="#about" style="font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:600;text-decoration:none;color:#4A5058;">Background</a>
         <a href="https://substack.com/@annabeea" target="_blank" rel="noopener" style="font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:600;text-decoration:none;color:#4A5058;">Theses</a>
         <a href="https://www.linkedin.com/in/annabalbright/" target="_blank" rel="noopener" style="font-family:'Bricolage Grotesque',sans-serif;font-size:14px;font-weight:600;text-decoration:none;color:#4A5058;">LinkedIn</a>
@@ -221,7 +225,7 @@
         <h2 style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(32px,4.6vw,68px);line-height:0.98;letter-spacing:-0.02em;text-transform:uppercase;margin:16px 0 0;">Heat is the largest unpriced drag on industrial labor.</h2>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(10,15,26,0.14);">
-        <div data-reveal style="padding:36px 28px 0 0;border-right:1px solid rgba(10,15,26,0.12);">
+        <div data-reveal style="padding:36px 28px 0 28px;border-right:1px solid rgba(10,15,26,0.12);">
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(48px,6.4vw,100px);line-height:0.9;color:#1E5FE8;letter-spacing:-0.03em;">2.4B</div>
           <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;color:#4A5058;margin:16px 0 0;line-height:1.6;max-width:280px;">people work in extreme heat worldwide, the crews who keep our world running.</p>
         </div>
@@ -229,10 +233,13 @@
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(48px,6.4vw,100px);line-height:0.9;color:#0A0F1A;letter-spacing:-0.03em;">$1.09T</div>
           <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;color:#4A5058;margin:16px 0 0;line-height:1.6;max-width:280px;">lost from the global economy in idle and slowed labor every year.</p>
         </div>
-        <div data-reveal data-delay="240" style="padding:36px 0 0 28px;">
+        <div data-reveal data-delay="240" style="padding:36px 28px 0 28px;">
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(48px,6.4vw,100px);line-height:0.9;color:#0A0F1A;letter-spacing:-0.03em;">$100B</div>
           <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;color:#4A5058;margin:16px 0 0;line-height:1.6;max-width:280px;">of that loss lands in the United States alone, before any OSHA penalty.</p>
         </div>
+      </div>
+      <div data-reveal style="margin-top:46px;">
+        <a href="research.html" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;color:#0A0F1A;text-decoration:none;border-bottom:2px solid #1E5FE8;padding-bottom:3px;">Read the research on heat &amp; productivity →</a>
       </div>
     </div>
   </section>
@@ -304,7 +311,8 @@
       <div data-reveal data-dir="right">
         <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.04em;color:#8A9099;"><span style="color:#1E5FE8;">/</span> The idea</span>
         <h2 style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(36px,4.8vw,76px);line-height:1;letter-spacing:-0.01em;margin:14px 0 22px;">Where Clema started.</h2>
-        <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(17px,1.3vw,19px);line-height:1.7;color:#2A2F36;margin:0 0 18px;max-width:560px;">The idea came out of the work, not a lab. For years I sat inside industrial and energy operations and watched heat do the same thing every summer. It slowed crews, stretched timelines, and put people at risk, and almost no one was pricing the cost.</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(17px,1.3vw,19px);line-height:1.7;color:#2A2F36;margin:0 0 18px;max-width:560px;">Clema didn't start in a lab. It started on a tarmac. Last summer I was flying home from a case in Houston when our flight stalled on the ground. I assumed it was the plane, or the heat coming off the asphalt. It was simpler, and more human than that: it was too hot for the ground crew to work safely, so they had to stop.</p>
+        <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(17px,1.3vw,19px);line-height:1.7;color:#2A2F36;margin:0 0 18px;max-width:560px;">I had spent years inside industrial and energy operations watching heat do exactly that, every summer. It slowed crews, stretched timelines, and put people at risk, and almost no one was pricing the cost. On that runway, it stopped being abstract.</p>
         <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(17px,1.3vw,19px);line-height:1.7;color:#2A2F36;margin:0;max-width:560px;">Cooling already existed, but nothing a worker could wear through a full shift. I went looking for the team that would build it. When I couldn't find one, I started Clema.</p>
       </div>
     </div>
@@ -359,7 +367,7 @@
         <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(18px,1.5vw,21px);line-height:1.7;color:rgba(255,255,255,0.84);margin:0;max-width:780px;">I am the <strong style="color:#fff;">only startup founder</strong> on the <strong style="color:#fff;">ISEA 600 committee</strong> writing OSHA's first federal heat-safety standard. I hold that seat alongside 3M and Cintas, on a rule expected to reach an estimated <strong style="color:#fff;border-bottom:2px solid #1E5FE8;">36 million American workers</strong>.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:64px;border-top:1px solid rgba(255,255,255,0.18);">
-        <div data-reveal style="padding:34px 28px 0 0;border-right:1px solid rgba(255,255,255,0.16);">
+        <div data-reveal style="padding:34px 28px 0 28px;border-right:1px solid rgba(255,255,255,0.16);">
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(34px,4vw,60px);line-height:0.9;color:#1E5FE8;letter-spacing:-0.02em;">1 OF 1</div>
           <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;color:rgba(255,255,255,0.66);margin:14px 0 0;line-height:1.6;">startup founder on the committee, alongside 3M and Cintas.</p>
         </div>
@@ -367,7 +375,7 @@
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(34px,4vw,60px);line-height:0.9;color:#fff;letter-spacing:-0.02em;">36M</div>
           <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;color:rgba(255,255,255,0.66);margin:14px 0 0;line-height:1.6;">American workers the rule is expected to reach.</p>
         </div>
-        <div data-reveal data-delay="240" style="padding:34px 0 0 28px;">
+        <div data-reveal data-delay="240" style="padding:34px 28px 0 28px;">
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(34px,4vw,60px);line-height:0.9;color:#fff;letter-spacing:-0.02em;">FEDERAL</div>
           <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:15px;color:rgba(255,255,255,0.66);margin:14px 0 0;line-height:1.6;">the first heat-safety standard of its kind in the United States.</p>
         </div>
@@ -462,6 +470,7 @@
           <div style="display:flex;flex-direction:column;gap:12px;font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:500;">
             <a href="#about" style="text-decoration:none;color:#fff;">Background</a>
             <a href="#osha" style="text-decoration:none;color:#fff;">Heat safety</a>
+            <a href="research.html" style="text-decoration:none;color:#fff;">Research</a>
             <a href="https://substack.com/@annabeea" target="_blank" rel="noopener" style="text-decoration:none;color:#fff;">Theses</a>
             <a href="https://clemacooling.com" target="_blank" rel="noopener" style="text-decoration:none;color:#fff;">Clema</a>
           </div>
