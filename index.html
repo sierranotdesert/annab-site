@@ -76,7 +76,7 @@
     font-size:26px;font-weight:700;letter-spacing:-0.02em;
     color:var(--ink);margin:0 0 4px;line-height:1.2;
   }
-  .role{font-size:16.5px;color:var(--body);margin:0 0 26px;}
+  .role{font-size:16.5px;color:var(--body);margin:0;}
   .role a{border-bottom:1px solid var(--accent);}
   .lede{
     font-size:19px;line-height:1.55;color:var(--ink);
@@ -89,12 +89,17 @@
   .meta a{color:var(--mute);border-bottom:1px solid var(--rule);}
   .meta a:hover{color:var(--ink);border-bottom-color:var(--accent);}
 
-  .portrait{
-    display:block;width:100%;max-width:720px;height:300px;
-    object-fit:cover;object-position:center 18%;
-    border-radius:2px;margin:0 0 4px;
+  .masthead{
+    display:flex;align-items:flex-start;justify-content:space-between;
+    gap:28px;margin:0 0 26px;
   }
-  .caption{font-size:13px;color:var(--mute);margin:8px 0 0;}
+  .mast-text{flex:1 1 auto;min-width:0;}
+  .where{font-size:15px;color:var(--mute);margin:2px 0 0;}
+  .portrait{
+    flex:0 0 auto;width:142px;height:180px;
+    object-fit:cover;object-position:center 22%;
+    border-radius:2px;
+  }
 
   /* ---------- sections ---------- */
   section{padding:34px 0;border-top:1px solid var(--rule);}
@@ -162,7 +167,9 @@
     .lede{font-size:17.5px;}
     .figs{grid-template-columns:repeat(2,1fr);gap:20px 18px;}
     .row{grid-template-columns:1fr;gap:3px;}
-    .portrait{height:220px;}
+    .masthead{gap:18px;}
+    .portrait{width:104px;height:132px;}
+    .where{font-size:14px;}
   }
 </style>
 </head>
@@ -170,8 +177,16 @@
 <div class="wrap">
 
   <header class="top">
-    <h1>Anna Albright</h1>
-    <p class="role">Co-Founder &amp; CEO, <a href="https://clemacooling.com" target="_blank" rel="noopener">Clema</a> &middot; San Francisco, CA</p>
+    <div class="masthead">
+      <div class="mast-text">
+        <h1>Anna Albright</h1>
+        <p class="role">Co-Founder &amp; CEO, <a href="https://clemacooling.com" target="_blank" rel="noopener">Clema</a></p>
+        <p class="where">San Francisco, CA &middot; on the ground in Abilene and Houston most months</p>
+      </div>
+      <img class="portrait" loading="eager" fetchpriority="high" decoding="async"
+        src="uploads/anna-portrait.jpg"
+        alt="Anna Albright, co-founder and CEO of Clema" />
+    </div>
 
     <p class="lede">I build on-body cooling for the 2.4 billion people who work in extreme heat, and I sit on the committee writing the first federal standard that will govern it.</p>
 
@@ -182,10 +197,6 @@
       <a href="research.html">Research</a>
     </p>
 
-    <img class="portrait" loading="eager" fetchpriority="high" decoding="async"
-      src="uploads/90CCB668-1522-4935-9AC6-21AFE927671B_1_105_c.jpeg"
-      alt="Anna Albright in a hard hat and high-visibility vest on an oil and gas rig during a Clema field pilot" />
-    <p class="caption">A field pilot on an energy jobsite. I'm based in San Francisco and on the ground in Abilene and Houston most months.</p>
   </header>
 
   <section>
@@ -195,27 +206,6 @@
     <p>Every deployed unit also instruments a worker. That is the second product: continuous on-body data for a workforce that has never had any.</p>
   </section>
 
-  <section>
-    <p class="label">Traction</p>
-    <div class="figs">
-      <div class="fig">
-        <div class="n"><em>&gt;</em>$10M</div>
-        <p>in inbound demand, generated without an outbound sales motion.</p>
-      </div>
-      <div class="fig">
-        <div class="n">3</div>
-        <p>paying customers, including a publicly traded oil and gas company and a national retailer.</p>
-      </div>
-      <div class="fig">
-        <div class="n">200</div>
-        <p>units in the first production run, effectively all committed.</p>
-      </div>
-      <div class="fig">
-        <div class="n">Live</div>
-        <p>commercial pilots, on real crews and real jobsites.</p>
-      </div>
-    </div>
-  </section>
 
   <section>
     <p class="label">The standard</p>
